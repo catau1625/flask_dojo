@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <div>
+        <h1>Welcome to Dojos y Ninjas</h1>
+    </div>
+    <div>
+        <table class="table table-dark">
+            <thead>
+                <th>Selecciona tu Dojo:</th>
+            </thead>
+            <tbody>
+                {% for dojo in dojos: %}
+                    <tr class="table-active">
+                        <th><a href="/show/{{ dojo.id }}">{{ dojo.name }}</a></th>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <div>
+        <h2>Si quieres inscribir tu dojo</h2>
+        <button class="btn btn-secondary" type="submit"><a href="/agregar_dojo">Click Aquí</a></button>
+    </div>
+    </div>
+
+{% endblock %}
+

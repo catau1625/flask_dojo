@@ -1,0 +1,26 @@
+* {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 3em;
+    padding-right: 3em;
+    text-align: center;
+  }
+nav{
+    width: 60rem;
+    height: 3rem;
+    align-content: space-between;
+  }
+.agregar_dojo{
+  margin-left: 13rem;
+}
+a{
+  text-decoration: none;
+  color: bisque;
+}
+.formulario_ninja{
+	margin: 3rem;
+	padding: 2rem;
+}
+

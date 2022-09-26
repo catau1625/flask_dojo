@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class="agregar_dojo">
+    <form action="/nuevo_dojo" method="post" class="row g-3">
+        <div class="col-auto">
+          <label class="form-control-plaintext" ><h2>Nombre del Dojo:</h2></label>
+          <input name="nombre_nuevo_dojo" type="text" class="form-control" placeholder="nombre aqui...">
+          <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+        </div>
+      </form>
+</div>
+
+{% endblock %}

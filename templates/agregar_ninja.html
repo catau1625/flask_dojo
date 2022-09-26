@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<div>
+    <h1>Ingrese Datos del Nuevo Ninja</h1>
+</div>
+<div class="formulario_ninja">
+    <form action="/nuevo_ninja" method="post">
+        <select name="dojo_id"  class="form-select form-select-lg mb-3" aria-label="Ejemplo de .form-select-lg">
+            <option selected>Seleccionar Dojo:</option>
+            {% for dojo in dojos: %}
+                <option value="{{ dojo.id }}">{{ dojo.name }}</option>
+            {% endfor %}
+        </select>
+          <div class="input-group mb-3" id="inputGroup-sizing-default">
+            <span class="input-group-text">Nombre:</span>
+            <input name="nombre" type="text" class="form-control" >
+          </div>
+          <div class="input-group mb-3" id="inputGroup-sizing-default">
+            <span class="input-group-text">Apellido:</span>
+            <input name="apellido" type="text" class="form-control">
+          </div>
+          <div class="input-group mb-3" id="inputGroup-sizing-default">
+            <span class="input-group-text" id="basic-addon1">Edad:</span>
+            <input name="edad" type="text" class="form-control">
+          </div>
+          <div>
+              <button type="submit">Agregar</button>
+          </div>
+    </form>
+</div>
+
+{% endblock %}

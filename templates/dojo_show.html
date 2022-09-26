@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <div>
+        <h1>Dojo: {{ dojo.name }}</h1>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CREATED AT</th>
+                    <th>UPDATED AT</th>
+                    <th>NINJAS <button class="btn btn-secondary" type="submit"><a href="/agregar_ninja">Agregar Ninja</a></button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ dojo.id }}</td>
+                    <td>{{ dojo.created_at }}</td>
+                    <td>{{ dojo.updated_at }}</td>
+                    <td>
+                        <ul>
+                            {% for n in ninjas: %}
+                                <li>{{ n.first_name }} {{ n.last_name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="btn btn-secondary"><a href="/home">Back</a></button>
+    </div>
+
+{% endblock %}
